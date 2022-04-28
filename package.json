@@ -1,0 +1,41 @@
+{
+  "name": "yakuza-erc721",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "deploy-hardhat": "npx hardhat --network localhost run scripts/deploy.js",
+    "deploy-rinkeby": "npx hardhat --network rinkeby run scripts/deploy.js",
+    "deploy-main": "npx hardhat --network homestead run scripts/deploy.js",
+    "test-sales": "npx hardhat --network localhost test test/test.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@nomiclabs/hardhat-ethers": "^2.0.3",
+    "@nomiclabs/hardhat-etherscan": "^2.1.8",
+    "@nomiclabs/hardhat-truffle5": "^2.0.3",
+    "@nomiclabs/hardhat-waffle": "^2.0.1",
+    "@nomiclabs/hardhat-web3": "^2.0.0",
+    "@openzeppelin/contracts": "^4.4.1",
+    "@openzeppelin/test-helpers": "^0.5.15",
+    "chai": "^4.3.4",
+    "dotenv": "^10.0.0",
+    "erc721a": "^3.1.0",
+    "ethereum-waffle": "^3.4.0",
+    "ethers": "^5.5.2",
+    "hardhat": "^2.8.0",
+    "web3": "^1.6.1"
+  },
+  "dependencies": {
+    "axios": "^0.26.1",
+    "crypto-js": "^4.1.1",
+    "dayjs": "^1.10.7",
+    "joi": "^17.5.0",
+    "keccak256": "^1.0.6",
+    "merkletreejs": "^0.2.27",
+    "yup": "^0.32.11"
+  }
+}
