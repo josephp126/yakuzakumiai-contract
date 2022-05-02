@@ -333,29 +333,26 @@ contract YakuzaKumiaiSale is AccessControl {
         }
     }
 
-    /// @notice Distribute the funds to team members
-    function withdrawToFounders() public payable onlyAdmin {
-        require(isWithdraw(), "PS: Not enough funds to split");
-        require(
-            marketWithdrawlAmount >= 50 ether,
-            "PS: Marketing funds is not finished yet!"
-        );
-        uint256 total = address(this).balance;
+    // /// @notice Distribute the funds to team members
+    // function withdrawToFounders() public payable onlyAdmin {
+    //     require(isWithdraw(), "PS: Not enough funds to split");
+    //     require(
+    //         marketWithdrawlAmount >= 50 ether,
+    //         "PS: Marketing funds is not finished yet!"
+    //     );
+    //     uint256 total = address(this).balance;
 
-        wallet1.transfer((total * 1967) / 10000);
-        wallet3.transfer((total * 2951) / 10000);
-        wallet4.transfer((total * 2951) / 10000);
-        wallet5.transfer((total * 1948) / 10000);
-        wallet6.transfer((total * 184) / 10000);
-    }
+    //     wallet1.transfer((total * 1967) / 10000);
+    //     wallet3.transfer((total * 2951) / 10000);
+    //     wallet4.transfer((total * 2951) / 10000);
+    //     wallet5.transfer((total * 1948) / 10000);
+    //     wallet6.transfer((total * 184) / 10000);
+    // }
 
     function grantRole(bytes32 _role, address _user) public override onlyAdmin {
         _grantRole(_role, _user);
     }
 
-    /// @notice Revokes the withdrawer role
-    /// @param _role Role which needs to be revoked
-    /// @param _user Address which we want to revoke
     function revokeRole(bytes32 _role, address _user)
         public
         override
