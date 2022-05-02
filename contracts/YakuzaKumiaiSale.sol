@@ -175,9 +175,6 @@ contract YakuzaKumiaiSale is AccessControl {
         return maxPreSale1MintPerWallet;
     }
 
-    /// @notice Main mint function
-    /// @param _to mint address
-    /// @param _count nft count to mint
     function _mint(address _to, uint256 _count) internal {
         require(totalMints + _count <= totalSales, "PS: Exceeds total sales");
         totalMints += _count;
